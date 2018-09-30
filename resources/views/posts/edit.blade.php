@@ -1,4 +1,3 @@
-@section('content')
 
     <h1>Posts</h1>
 
@@ -30,4 +29,3 @@
         {!! Form::close() !!}
     </div>
 
-@endsection

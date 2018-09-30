@@ -40,14 +40,14 @@ class ReactionController extends Controller
     public function store(Request $request)
     {
         //
-        $validated =  $request->validated();
+
 
         $reaction = new Reaction();
         $reaction->title = $request->title;
         $reaction->body = $request->body;
         $reaction->save();
 
-        return redirect('/reaction')->with('status', 'Reaction is added');
+        return redirect('/reactions')->with('status', 'Reaction is added');
     }
 
     /**
@@ -88,7 +88,7 @@ class ReactionController extends Controller
         $reaction->body = $request->body;
         $reaction->save();
 
-        return redirect()->action('ReactionConrtoller@index')->with('correct', 'Reaction edited');
+        return redirect()->action('ReactionController@index')->with('correct', 'Reaction edited');
     }
 
     /**

@@ -1,4 +1,3 @@
-@section('content')
 
     <h1>Reactions</h1>
 
@@ -29,5 +28,3 @@
         {!! Form::submit('Submit'); !!}
         {!! Form::close() !!}
     </div>
-
-@endsection

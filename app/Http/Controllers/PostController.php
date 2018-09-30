@@ -40,7 +40,7 @@ class PostController extends Controller
     public function store(Request $request)
     {
         //
-        $validated =  $request->validated();
+
 
         $post = new Post();
         $post->title = $request->title;
@@ -88,7 +88,7 @@ class PostController extends Controller
         $post->body = $request->body;
         $post->save();
 
-        return redirect()->action('PostConrtoller@index')->with('correct', 'Post edited');
+        return redirect()->action('PostController@index')->with('correct', 'Post edited');
     }
 
     /**

@@ -1,5 +1,4 @@
-{{--@extends('layout')--}}
-{{--@section('content')--}}
+
 
     <h1>Posts</h1>
     @if (session('status'))
@@ -36,4 +35,3 @@
         @endforeach
         </tbody>
     </table>
-{{--@endsection--}}

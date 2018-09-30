@@ -1,5 +1,4 @@
-{{--@extends('layout')--}}
-{{--@section('content')--}}
+
 
 <h1>Reactions</h1>
 @if (session('status'))
@@ -7,7 +6,6 @@
         {{session('status')}}
     </div>
 @endif
-
 <table class="table table-hover table-dark table-striped">
     <thead>
     <tr>
@@ -36,4 +34,3 @@
     @endforeach
     </tbody>
 </table>
-{{--@endsection--}}

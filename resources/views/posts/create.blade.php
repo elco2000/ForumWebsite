@@ -1,5 +1,4 @@
 
-@section('content')
     <h1>Posts</h1>
 
     @if($errors->any())
@@ -24,4 +23,3 @@
     <button type="submit" class="btn btn-primary">Submit</button>
 
     {!! Form::close() !!}
-@endsection
