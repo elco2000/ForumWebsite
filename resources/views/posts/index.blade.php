@@ -1,6 +1,4 @@
-
-
-    <h1>Posts</h1>
+ <h1>Posts</h1>
     @if (session('status'))
         <div class="alert alert-succes">
             {{session('status')}}
@@ -27,10 +25,10 @@
                 <td><a href="{{URL::to('posts/'.$post->id.'/edit')}}">
                         <button class="tablebutton" type="submit">Edit</button>
                     </a></td>
-                {{--<td>{{ Form::open(array('url' => '$posts/'.$post->id,  'class' => 'pull-right')) }}--}}
-                    {{--{{ Form::hidden('_method', 'DELETE') }}--}}
-                    {{--{{ Form::submit('Delete', array('class' => 'tablebutton')) }}--}}
-                    {{--{{ Form::close() }}</td>--}}
+                <td>{{ Form::open(array('url' => '$posts/'.$post->id,  'class' => 'pull-right')) }}
+                    {{ Form::hidden('_method', 'DELETE') }}
+                    {{ Form::submit('Delete', array('class' => 'tablebutton')) }}
+                    {{ Form::close() }}</td>
             </tr>
         @endforeach
         </tbody>
