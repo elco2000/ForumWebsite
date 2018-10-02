@@ -19,3 +19,5 @@ Route::get('/', function () {
 Route::resource('/posts', 'PostController');
 
 Route::resource('/reactions', 'ReactionController');
+Route::get('/posts/{post}/delete', 'PostController@delete');
+Route::get('/reactions/{reaction}/delete', 'ReactionController@delete');

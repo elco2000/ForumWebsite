@@ -96,6 +96,12 @@ class ReactionController extends Controller
      * @return \Illuminate\Http\RedirectResponse
      * @throws \Exception
      */
+    public function delete(Reaction $reaction)
+    {
+        return view('reactions.delete', compact('reaction'));
+    }
+
+
     public function destroy(Reaction $reaction)
     {
         //

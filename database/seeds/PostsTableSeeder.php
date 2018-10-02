@@ -12,7 +12,8 @@ class PostsTableSeeder extends Seeder
     public function run()
     {
         //
-        factory(App\Post::class, 25)->create();
-
+        factory(App\Post::class, 5)->create()->each(function($post) {
+            $post->reactions()->saveMany(factory(\App\Reaction::class, rand(0, 10))->create(['post_id' => $post->id]));
+        });
     }
 }

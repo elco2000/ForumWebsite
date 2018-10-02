@@ -15,6 +15,7 @@ class CreateReactionsTable extends Migration
     {
         Schema::create('reactions', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('post_id');
             $table->string('title', 60);
             $table->text('body');
             $table->timestamps();

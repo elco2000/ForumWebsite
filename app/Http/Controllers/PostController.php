@@ -96,10 +96,17 @@ class PostController extends Controller
      * @return \Illuminate\Http\RedirectResponse
      * @throws \Exception
      */
+
+    public function delete(Post $post)
+    {
+        return view('posts.delete', compact('post'));
+    }
+
+
     public function destroy(Post $post)
     {
         //
         $post->delete();
-        return redirect()->action('PostController@index')->with('correct', 'Post deleted');
+        return redirect()->action('PostController@index')->with('correct', 'Post verwijderd');
     }
 }
